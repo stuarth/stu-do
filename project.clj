@@ -8,7 +8,8 @@
                  [hiccup "1.0.5"]
                  [org.clojure/tools.logging "0.3.1"]]
   :plugins [[lein-ring "0.8.13"]]
-  :ring {:handler todo.core.handler/app}
+  :ring {:handler todo.core.handler/app
+         :nrepl {:start? true}}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
